@@ -29,14 +29,15 @@ Send data use Http request to PushServer
 
 ## notify server
 
+Upon application startup, a comparison is performed between the hash value stored on the server and the locally stored value. If a mismatch is detected, the configuration is considered outdated and a re-upload of the configuration from the server is initiated.
+
+### Host
+
 `https://notify.keychat.io/v2`
 
 ### 1. init
 
 - Post `/init`
-
-When app startup, check the hashCode of notification's config from server.
-if not equals with local config, call init method.
 
 ```json
 {
@@ -44,7 +45,7 @@ if not equals with local config, call init method.
   "deviceId": "<deviceId>",
   "pubkeys": "<list of pubkeys to be notified about. Include: identity pubkey, room pubkey of SharedKeyGroup, ratchet key of private chat>",
   "relays": "<list of relays for the push server to subscribe to>",
-  "hash": "hash code of above config"
+  "hash": "hash code of config"
 }
 ```
 
@@ -85,7 +86,7 @@ User turn off notification setting.
 
 ### 4. delete all config (turn off notification)
 
-- POST '/delete'
+- POST `/delete`
 
 ```json
 { "deviceId": "<deviceId>" }
