@@ -5,15 +5,10 @@
 ![](https://www.mermaidchart.com/raw/71d36b34-59fc-41fd-8a51-3c7dbbef3e19?theme=light&version=v0.1&format=svg)
 
 1. User uploads files: Users can upload images, videos, and various types of files to Keychat.
-
 2. File Service Configuration: File storage on the relay may be charged or free. If payment is required, pay and then obtain file upload parameters.
-
 3. Encryption and key generation: A one-time secret key is generated and used to encrypt the file using AES-CTR encryption.
-
 4. Upload to AWS S3: After obtaining the necessary upload parameters from the relay (including ECash sat payment if the relay charges for file storage), the encrypted file is uploaded to AWS S3 servers.
-
 5. Sharing file information: The file download path and decryption key are then sent to the recipient.
-
 6. Recipient downloads and decrypts: Upon receiving the message from the relay, the recipient retrieves the file and performs local decryption, saving the decrypted file to their local storage.
 
 ```mermaid
@@ -50,7 +45,7 @@ Get `/api/v1/info`
 For files under 10M, each file requires a payment of 1sat.
 If the price is 0, It's free to upload files.
 
-## Reuqst Upload Params
+## Request Upload Params
 
 Post `/api/v1/object`
 
