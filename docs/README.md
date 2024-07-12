@@ -50,7 +50,7 @@ Keychat implements the following nips:
 ## Getting Started
 
 ```
-git submodule update --recursive
+git submodule update --init --recursive
 
 melos bootstrap
 
