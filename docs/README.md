@@ -55,6 +55,9 @@ git submodule update --init --recursive
 melos bootstrap
 
 cargo install flutter_rust_bridge_codegen@1.82.6
+cd packages/keychat_rust/rust
+cargo xcode # for ios
+cd $project_home_dir
 
 melos run rust:ios # build a rust ffi lib for app
 

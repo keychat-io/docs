@@ -1,7 +1,8 @@
 <!-- docs/_sidebar.md -->
 
 - [Home](/)
-- [Quick start](start.md)
+<!-- - [Quick start](start.md) -->
+- [FAQ](https://keychat.npub.pro/ ":target=_blank")
 - [Changelog](Changelog.md)
 - Fetures
 
@@ -17,5 +18,3 @@
   - [Pairwise Group](group/pairwise-group.md)
   - [Shared Key Group](group/shared-key-group.md)
   - [Incognito Nip4 Message](group/incognito-nip4-message.md)
-- FAQs
-  - [Why Ecash?](FAQs/why-ecash.md)
