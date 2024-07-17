@@ -10,6 +10,11 @@
 <img src="./_media/settings.jpeg" width="30%" height="auto"/>
 </p>
 
+## Download
+
+- [Android APK](https://github.com/keychat-io/keychat-app/releases)
+- iOS: Comming
+
 ## Inspiration
 
 Keychat is inspired by the postal system — stamps, post offices, letters.
@@ -54,21 +59,11 @@ git submodule update --init --recursive
 
 melos bootstrap
 
-cargo install flutter_rust_bridge_codegen@1.82.6
-cd packages/keychat_rust/rust
-cargo xcode # for ios
-cd $project_home_dir
-
-melos run rust:ios # build a rust ffi lib for app
-
-or [melos run rust:macos, melos run rust:android]
-
-
 cd packages/app
+
 flutter run
 
-# build apk to release
-melos run build:android
+melos run build:android # build apk to release
 ```
 
 ## Git Commit
